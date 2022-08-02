@@ -83,3 +83,7 @@ public class App {
 - `out` is a static variable within `System` that represents the output of your program (stdout = standard output).
 - `println` is a method of `out` that can be used to print a line.
 
+## Other References
+
+- [Learn Java Online - Hello World](https://www.learnjavaonline.org/en/Hello%2C_World%21)
+
