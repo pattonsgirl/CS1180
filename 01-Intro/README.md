@@ -5,11 +5,11 @@
 - What's in "Hello World"?  [Java Project Breakdown](JavaProjectBreakdown.md)
 - Output to console
   - System.console
+    - printf
   - System.out
-  - println
-  - print
-  - printf
-- Variables / data types
+    - println
+    - print
+- [Variables / data types](https://jenkov.com/tutorials/java/variables.html)
   - int
     - 4 bytes
     - Stores whole numbers from -2,147,483,648 to 2,147,483,647
@@ -21,7 +21,7 @@
   - [value ranges for data types](https://www.w3schools.com/java/java_data_types.asp)
     - 8 bits = 1 byte  How many 1's and 0's do I have to store the number I'm working with?
 - Math
-  - [arithmetic operators](https://www.geeksforgeeks.org/java-arithmetic-operators-with-examples/)
+  - [Java operators](https://www.programiz.com/java-programming/operators)
   - [Math class](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
     - return types & arguments
   - rounding (floor, variable type cutoffs)
