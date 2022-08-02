@@ -1,17 +1,31 @@
 # Week 01 - Intro
 
-- Who am I?
 - [Environment Setup](../README.md)
 - [Getting Started with Java in VSCode](https://code.visualstudio.com/docs/java/java-tutorial)
 - What's in "Hello World"?  [Java Project Breakdown](JavaProjectBreakdown.md)
-- console I/O class
+- Output to console
+  - System.console
+  - System.out
   - println
   - print
   - printf
-- Variables
+- Variables / data types
   - int
+    - 4 bytes
+    - Stores whole numbers from -2,147,483,648 to 2,147,483,647
   - double
-  - String
-- Math class
-  - basic math
-  - rounding
+    - 8 bytes
+    - Stores fractional numbers. Sufficient for storing 15 decimal digits
+  - [String](https://www.w3schools.com/java/java_strings.asp)
+    - A String variable contains a collection of characters surrounded by double quotes
+  - [value ranges for data types](https://www.w3schools.com/java/java_data_types.asp)
+    - 8 bits = 1 byte  How many 1's and 0's do I have to store the number I'm working with?
+- Math
+  - [arithmetic operators](https://www.geeksforgeeks.org/java-arithmetic-operators-with-examples/)
+  - [Math class](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
+    - return types & arguments
+  - rounding (floor, variable type cutoffs)
+- User input from console
+  - [System Console readLine](https://www.geeksforgeeks.org/java-io-console-class-java/)
+  - [Scanner class + System in](https://stackabuse.com/how-to-get-user-input-in-java/)
+- [Formatting output](https://www.baeldung.com/java-printstream-printf)
