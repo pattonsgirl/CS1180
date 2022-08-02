@@ -1,5 +1,5 @@
 # Weekly Topic list for CS 1180
-- Course coordinator: Cheatham, Michelle Andreen
+- Course coordinator: Cheatham
 
 ### Week 1: Intro
 
