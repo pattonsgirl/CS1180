@@ -3,7 +3,7 @@
 - Who am I?
 - [Environment Setup](../README.md)
 - [Getting Started with Java in VSCode](https://code.visualstudio.com/docs/java/java-tutorial)
-- What's in "Hello World"?
+- What's in "Hello World"?  [Java Project Breakdown](JavaProjectBreakdown.md)
 - console I/O class
   - println
   - print
