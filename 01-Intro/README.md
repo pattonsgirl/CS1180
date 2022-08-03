@@ -2,7 +2,7 @@
 
 - [Environment Setup](../README.md)
 - [Getting Started with Java in VSCode](https://code.visualstudio.com/docs/java/java-tutorial)
-- What's in "Hello World"?  [Java Project Breakdown](JavaProjectBreakdown.md)
+- What's in "Hello World"? [Java Project Breakdown](JavaProjectBreakdown.md)
 - Output to console
   - System.console
     - printf
@@ -19,7 +19,7 @@
   - [String](https://www.w3schools.com/java/java_strings.asp)
     - A String variable contains a collection of characters surrounded by double quotes
   - [value ranges for data types](https://www.w3schools.com/java/java_data_types.asp)
-    - 8 bits = 1 byte  How many 1's and 0's do I have to store the number I'm working with?
+    - 8 bits = 1 byte How many 1's and 0's do I have to store the number I'm working with?
 - Math
   - [Java operators](https://www.programiz.com/java-programming/operators)
   - [Math class](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
@@ -28,4 +28,6 @@
 - User input from console
   - [System Console readLine](https://www.geeksforgeeks.org/java-io-console-class-java/)
   - [Scanner class + System in](https://stackabuse.com/how-to-get-user-input-in-java/)
-- [Formatting output](https://www.baeldung.com/java-printstream-printf)
+- Formatting output
+  - https://stackabuse.com/how-to-format-a-string-in-java-with-examples/
+  - https://www.baeldung.com/java-printstream-printf
