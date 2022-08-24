@@ -1,4 +1,7 @@
 
+//import java io class
+//import Scanner
+
 public class userinput {
     public static void main(String[] args) {
         // Prompt a user
