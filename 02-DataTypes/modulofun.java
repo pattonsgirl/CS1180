@@ -26,6 +26,9 @@ public class modulofun {
         // as possible
         int flowersRemaining = flowersInShop % flowersPerOrder;
         System.out.printf("You will have %d flowers left over\n", flowersRemaining);
-
+        // The next great question would be:
+        // Can you fulfill all the orders?
+        // This will need a new tool: an if statement!
+        // Stay tuned next week...
     }
 }
