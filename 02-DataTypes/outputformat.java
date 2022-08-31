@@ -24,7 +24,18 @@ public class outputformat {
         String name2 = "Sally";
         int age1 = 55;
         int age2 = 67;
-        System.out.printf("Name |\t Age\n");
-        System.out.printf("%-8s | %4d", name1, age1);
+        // Printing out column headers.
+        // Being lazy and not storing "NAME" and "AGE" in variables
+        // But they are still strings (thus the %s)
+        System.out.printf("%-8s | %4s\n", "NAME", "AGE");
+        // Use 8 spaces (slots) to print name1 ("Jack"). Justify left (-8)
+        // Use 4 spaces (slots) to print age1 (55). Justify right (4)
+        System.out.printf("%-8s | %4d\n", name1, age1);
+        System.out.printf("%-8s | %4d\n", name2, age2);
+        // Use 8 spaces (slots) to print name2 ("Sally"). Justify right (8)
+        // Use 4 spaces (slots) to print age2 (67). Justify left (-4)
+        System.out.printf("%8s | %-4d\n", name2, age2);
+        System.out.printf("%8s | %-4d\n", name1, age1);
+
     }
 }
