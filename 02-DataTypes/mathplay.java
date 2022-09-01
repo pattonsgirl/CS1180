@@ -33,9 +33,9 @@ public class mathplay {
         double y2 = 2.0;
 
         // store result of (x1 + x2) squared
-        double temp1 = Math.pow(x1 + x2, 2);
+        double temp1 = Math.pow(x1 - x2, 2);
         // store result of (y1 + y2) squared
-        double temp2 = Math.pow(y1 + y2, 2);
+        double temp2 = Math.pow(y1 - y2, 2);
         // calculate distance between two points
         double distance = Math.sqrt(temp1 + temp2);
 

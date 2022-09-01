@@ -50,5 +50,6 @@ public class calculatorv1 {
         // Expected output matches program output
         // create test cases so you can compare what you expect
         // versus what your program gave as output
+        // scnr.close();
     }
 }
