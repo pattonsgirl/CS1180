@@ -11,6 +11,7 @@ public class calculatorv1 {
         int num2 = 0;
         num1 = scnr.nextInt();
         num2 = scnr.nextInt();
+        /// scnr.close();
         // show user the two values in the following ways:
         // added
         double added = num1 + num2;
