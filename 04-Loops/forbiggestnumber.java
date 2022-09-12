@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class forbiggestnumber {
     public static void main(String[] args) {
@@ -10,5 +11,22 @@ public class forbiggestnumber {
          * Print the largest number the user provided
          * 
          */
+        Scanner scnr = new Scanner(System.in);
+        int i;
+        int biggest = 0;
+        int userNum = 0;
+
+        for (i = 0; i <= 10; ++i) {
+            System.out.println("Give me a number: ");
+            userNum = scnr.nextInt();
+
+            if (userNum > biggest) {
+                System.out.println("The biggest so far was " + biggest);
+                biggest = userNum;
+            }
+        }
+
+        System.out.println("The biggest number given was: " + biggest);
+
     }
 }
