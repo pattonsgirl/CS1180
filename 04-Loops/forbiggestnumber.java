@@ -16,10 +16,10 @@ public class forbiggestnumber {
         int biggest = 0;
         int userNum = 0;
 
-        for (i = 0; i <= 10; ++i) {
+        for (i = 0; i < 10; ++i) {
             System.out.println("Give me a number: ");
             userNum = scnr.nextInt();
-
+            // System.out.printf("testing %d against %d\n", userNum, biggest);
             if (userNum > biggest) {
                 System.out.println("The biggest so far was " + biggest);
                 biggest = userNum;
