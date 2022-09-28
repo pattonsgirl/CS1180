@@ -1,24 +1,12 @@
-public class shapesmethods {
-    // static variables can be accessed by any method
-    // within the class
-    // final = immutable / unchangeable, will cause an error if change is attempted
-    final static double GRAVITY = 9.8;
-    // no final keyword means the value stored here starts at 9.8
-    // but could be changed by methods as my program chugs along
-    static double accumulator = 9.8;
+public class overflowmethods {
+    // Method overflow
+    // Methods with the same name, but differing set of
+    // defined parameters.
 
-    // take nested loops samples that print pyramid and
-    // rectangle and create methods that do the same job
-    // code from 04-Loops: nestedloopshapes.java
-
-    // pyramid prints a pyramid
-    // Parameter: integer that defines pyramid height
+    // shape prints a pyramid
+    // Parameters: integer that defines number of lines
     // Return value: void
-    public static void pyramid(int a) {
-        System.out.println(GRAVITY);
-        // if GRAVITY is final, then this would cause an issue
-        // else GRAVITY can be changed
-        // GRAVITY = 90.0;
+    public static void shape(int a) {
         System.out.println("Printing a half pyramid");
         for (int i = 0; i < a; i++) {
             // System.out.print("row " + i + ": ");
@@ -32,10 +20,10 @@ public class shapesmethods {
         }
     }
 
-    // rectangle prints a rectangle
+    // shape prints a rectangle
     // Parameters: integers that define height and width
     // Return value: void
-    public static void rectangle(int a, int b) {
+    public static void shape(int a, int b) {
         System.out.println("Printing a rectangle");
         for (int i = 0; i < a; i++) {
             // System.out.print("row " + i + ": ");
@@ -52,10 +40,10 @@ public class shapesmethods {
         int lines = 3;
         int across = 10;
         // methods take arguments, but have no return value
-        pyramid(lines);
+        shape(lines);
         // order of arguments matters!
-        rectangle(lines, across);
-        rectangle(across, lines);
+        // shape(lines, across, lines);
+        shape(across, lines);
         System.out.println("All done!");
     }
 }
