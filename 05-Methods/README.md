@@ -116,3 +116,19 @@ public static void main(String[] args) {
     result = feetToInches(feet, inches);
 }
 ```
+
+- Javadoc
+
+  - All tags in Javadoc & usage rules:
+    - https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
+  - Generate Javadoc in your class with a VS Code extension
+
+    - This will NOT guess at what you function does, but will create the basic tag kit for your functions
+    - https://marketplace.visualstudio.com/items?itemName=madhavd1.javadoc-tools
+
+  - Compile the Javadoc for your java file(s) - https://www.baeldung.com/javadoc
+    - `$ javadoc -d doc javadocsample.java`
+      - `javadoc` is the command (program).
+      - `-d` = create a directory called “doc”
+      - `javadocsample.java` is the specific file I want to generate `javadoc` for.  If I had a folder full of code, I could do something similar to below:
+        - `src\*` = do for all java files in the `src` folder
