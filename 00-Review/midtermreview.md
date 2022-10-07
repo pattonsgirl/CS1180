@@ -14,6 +14,7 @@
 - `+`, `-`, `*`, `/`, `%`
 - order of operations
 - Math class
+- Random number generators
 
 ## Conditionals
 

@@ -1,4 +1,4 @@
-# Week XX - Arrays
+# Week 08 - Arrays
 
 - an array is a list of values
 - accessing array elements

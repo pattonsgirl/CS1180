@@ -1,4 +1,4 @@
-# Week XX - File I/O
+# Week 08 - File I/O
 
 - reading from a file
 - writing to a file
