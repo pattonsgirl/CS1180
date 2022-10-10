@@ -1,22 +1,25 @@
 # Week 06 - Methods
 
-- [Java Methods 101](https://www.programiz.com/java-programming/methods)
+### [Java Methods 101](https://www.programiz.com/java-programming/methods)
+
 - purpose of methods
   - reduce redundancy
   - clean up code flow
   - code reusability
-- [method syntax](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
-  - Access modifiers `public static` are used for intro programmers
-    - use the `static` keyword to access methods without creating objects
-  - `return_data_type`
-    - return `void` (nothing)
-    - return _one_ data type
-  - `methodName` rules
-    - method names should be a verb in lowercase or a multi-word name that begins with a verb in lowercase, followed by adjectives, nouns, etc.
-    - in general they use camelCase for multi-word names
-  - `parameters`
-    - define none (no arguments can be passed to method) `()`
-    - define one or more, along with data type and variable name to access within method
+
+### [method syntax](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
+
+- Access modifiers `public static` are used for intro programmers
+  - use the `static` keyword to access methods without creating objects
+- `return_data_type`
+  - return `void` (nothing)
+  - return _one_ data type
+- `methodName` rules
+  - method names should be a verb in lowercase or a multi-word name that begins with a verb in lowercase, followed by adjectives, nouns, etc.
+  - in general they use camelCase for multi-word names
+- `parameters`
+  - define none (no arguments can be passed to method) `()`
+  - define one or more, along with data type and variable name to access within method
 
 ```
 access_modifiers return_data_type methodName (parameters) {
@@ -25,8 +28,9 @@ access_modifiers return_data_type methodName (parameters) {
 }
 ```
 
-- void methods
-  - these methods return nothing and declare a return type of `void`
+### void methods
+
+- these methods return nothing and declare a return type of `void`
 
 ```
 public static void printMenu (parameters) {
@@ -35,10 +39,11 @@ public static void printMenu (parameters) {
 }
 ```
 
-- return values from methods
-  - methods can return **one** data type
-  - int, double, float, String, char - all options
-  - must `return` a value of that type when leaving method
+### Return values from methods
+
+- methods can return **one** data type
+- int, double, float, String, char - all options
+- must `return` a value of that type when leaving method
 
 ```
 public static int calcSum (parameters) {
@@ -47,9 +52,10 @@ public static int calcSum (parameters) {
 }
 ```
 
-- define parameters of methods
-  - methods can define one or more parameters
-  - parameters store the value given when the method is called with arguments
+### Define parameters of methods
+
+- methods can define one or more parameters
+- parameters store the value given when the method is called with arguments
 
 ```
 public static int calcSum (int var1, String var2, double var3) {
@@ -60,9 +66,10 @@ public static int calcSum (int var1, String var2, double var3) {
 }
 ```
 
-- calling a method
-  - arguments must be passed in order defined by method parameters
-  - store a method's return type in a variable of corresponding type
+### Calling a method
+
+- arguments must be passed in order defined by method parameters
+- store a method's return type in a variable of corresponding type
 
 ```
 // method has no parameters and no return value
@@ -75,21 +82,28 @@ int result = addRandNums();
 double result = calcAverage(num1, num2, num3);
 ```
 
-- [variable scope in classes & methods](https://www.geeksforgeeks.org/variable-scope-in-java/)
-  - variables declared in a method can only be referenced in that method
-    - assuming they are referenced after being defined
-  - variables declared outside of methods, or class variables, can be accessed by any method: `final static double GRAVITY = 9.8;`
-- method scope
-  - methods declared in the same class can be called regardless of order declared
-  - is it good practice to declare methods before `main` as other languages are not as forgiving
-- [**pass by value** vs pass by reference](https://www.cs.virginia.edu/~jh2jf/courses/cs2110/java-pass-by-value.html)
-  - Java is a "pass by value" language.
-  - Methods receive a **copy** of data given by argument to a parameter
-  - In Java, methods cannot directly modify the original's contents
-  - This is compared to C or C++, which allow for pass by reference
-    - In these languages, we can pass the **address** the value is stored at, and manipulate directly the data stored at that address
-- [overloading methods](https://www.programiz.com/java-programming/method-overloading)
-  - methods with the same name, but define different parameter sets
+### [variable scope in classes & methods](https://www.geeksforgeeks.org/variable-scope-in-java/)
+
+- variables declared in a method can only be referenced in that method
+  - assuming they are referenced after being defined
+- variables declared outside of methods, or class variables, can be accessed by any method: `final static double GRAVITY = 9.8;`
+
+### method scope
+
+- methods declared in the same class can be called regardless of order declared
+- is it good practice to declare methods before `main` as other languages are not as forgiving
+
+### [**pass by value** vs pass by reference](https://www.cs.virginia.edu/~jh2jf/courses/cs2110/java-pass-by-value.html)
+
+- Java is a "pass by value" language.
+- Methods receive a **copy** of data given by argument to a parameter
+- In Java, methods cannot directly modify the original's contents
+- This is compared to C or C++, which allow for pass by reference
+  - In these languages, we can pass the **address** the value is stored at, and manipulate directly the data stored at that address
+
+### [overloading methods](https://www.programiz.com/java-programming/method-overloading)
+
+- methods with the same name, but define different parameter sets
 
 ```
 public static int feetToInches(int feet, int inches){
@@ -117,18 +131,18 @@ public static void main(String[] args) {
 }
 ```
 
-- Javadoc
+### Javadoc
 
-  - All tags in Javadoc & usage rules:
-    - https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
-  - Generate Javadoc in your class with a VS Code extension
+- All tags in Javadoc & usage rules:
+  - https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
+- Generate Javadoc in your class with a VS Code extension
 
-    - This will NOT guess at what you function does, but will create the basic tag kit for your functions
-    - https://marketplace.visualstudio.com/items?itemName=madhavd1.javadoc-tools
+  - This will NOT guess at what you function does, but will create the basic tag kit for your functions
+  - https://marketplace.visualstudio.com/items?itemName=madhavd1.javadoc-tools
 
-  - Compile the Javadoc for your java file(s) - https://www.baeldung.com/javadoc
-    - `$ javadoc -d doc javadocsample.java`
-      - `javadoc` is the command (program).
-      - `-d` = create a directory called “doc”
-      - `javadocsample.java` is the specific file I want to generate `javadoc` for.  If I had a folder full of code, I could do something similar to below:
-        - `src\*` = do for all java files in the `src` folder
+- Compile the Javadoc for your java file(s) - https://www.baeldung.com/javadoc
+  - `$ javadoc -d doc javadocsample.java`
+    - `javadoc` is the command (program).
+    - `-d` = create a directory called “doc”
+    - `javadocsample.java` is the specific file I want to generate `javadoc` for.  If I had a folder full of code, I could do something similar to below:
+      - `src\*` = do for all java files in the `src` folder
