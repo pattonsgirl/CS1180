@@ -1,4 +1,4 @@
-# Week 08 - File I/O
+# Week 08 - Exceptions & File I/O
 
 Note: There are other methods / classes for File Reading / Writing. The notes below cover what is used in the course (what we will know best).
 
