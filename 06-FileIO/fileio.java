@@ -38,7 +38,8 @@ public class fileio {
 
         // close input file (done reading)
         fileByteStream.close();
-        // close output file (done writing)
+        // close output file & the file Writer (done writing)
+        outFS.close();
         fileOutStream.close();
     }
 }
