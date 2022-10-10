@@ -11,6 +11,9 @@
 - accessing the last element in an array
 - array index out of bounds exceptions
 
+- review of basic String methods
+- recommended activity: l33t translator
+
 ### Week 10: More on Arrays
 
 - loop processing of arrays (including for each)
