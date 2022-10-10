@@ -1,5 +1,8 @@
 # Week 08 - Arrays
 
+- declaring an array:
+  - `dataType[] arrayName = new dataType[numElements];`
+  -
 - an array is a list of values
 - accessing array elements
 - array’s length attributes
