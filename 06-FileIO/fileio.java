@@ -17,15 +17,18 @@ public class fileio {
     // to handle exceptions if file not found / cannot be opened
     // will not compile if exception handling is not included
     public static void main(String[] args) throws IOException {
-        FileInputStream fileByteStream = new FileInputStream("readdata.txt"); // File input stream
+        // relative path
+        FileInputStream fileByteStream = new FileInputStream("06-FileIO/readdata.txt"); // File input stream
         Scanner inFS = new Scanner(fileByteStream);
 
-        FileOutputStream fileOutStream = new FileOutputStream("output.txt");
+        FileOutputStream fileOutStream = new FileOutputStream("06-FileIO/output.txt");
         PrintWriter outFS = new PrintWriter(fileOutStream);
 
         // read from file like you would from standard input (console)
         String str1 = inFS.nextLine();
         String str2 = inFS.nextLine();
+        int num1 = inFS.nextInt();
+        num1 = num1 * 3;
 
         // print str1 to standard output (console)
         System.out.println(str1);
