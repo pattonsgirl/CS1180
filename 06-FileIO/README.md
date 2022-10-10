@@ -11,6 +11,7 @@ Note: There are other methods / classes for File Reading / Writing. The notes be
 - **IOException** is also known as a checked exception. They are checked by the compiler at the compile-time and the programmer is prompted to handle these exceptions.
   - FileNotFoundException
   - EOFException
+- [Rollbar - Java Exceptions Hierarchy](https://rollbar.com/blog/java-exceptions-hierarchy-explained/)
 - Syntax of a try/ catch block:
   - [`try... catch... finally...` samples](https://www.programiz.com/java-programming/try-catch)
 
