@@ -4,7 +4,7 @@ import java.util.Scanner;
 // simplify imports:
 import java.io.*;
 
-public class numsum {
+public class numsumthrows {
     // new thing: "throws IOException"
     // to handle exceptions if file not found / cannot be opened
     // will not compile if exception handling is not included here
