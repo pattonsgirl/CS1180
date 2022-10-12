@@ -10,7 +10,7 @@ public class numsum {
     // will not compile if exception handling is not included here
     // OR in a try / catch
     public static void main(String[] args) throws IOException {
-        // relative path
+        // TODO: use try catch block instead of `throws`
         FileInputStream fileByteStream = new FileInputStream("06-FileIO/numdata.txt"); // File input stream
         Scanner inFS = new Scanner(fileByteStream);
 
