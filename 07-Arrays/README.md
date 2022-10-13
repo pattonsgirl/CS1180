@@ -10,6 +10,7 @@ An array of a collection / list of similar types
 - As an intro, we will play with arrays of "primitive" data types
   - `int`, `char`, `double`, `byte`, `short`, `float`, `boolean`
 - Once declared, the size **or length** of an array in Java is fixed
+- An array reserves a **block** of memory to store n-many elements of the datatype specified
 
 ### Declaring an array
 
@@ -26,12 +27,72 @@ An array of a collection / list of similar types
   - creates the array and loads each element with a default value.
   - size is set to number of elements listed on declaration
 
-- accessing array elements
-- array’s length attributes
+### Accessing array elements
+
+The table below is of an array initialized to hold 5 **elements**
+
+- `int[] numarr = {24, 90, 65, 32, 3};`
+
+The value stored in each element of the array can be accessed by **index**
+To access the value, use the array name followed by `[`, `index` number, and `]`
+
+- `System.out.println(numarr[3]);` Would print `32` to the console
+- `numarr[3] = 42;` would store the value 42 in `numarr` at index 3 (element 4)
+
+Valid array **indices** are 0 to n-1, where n is the number of elements in the array
+
+- The **first** index of an array is **0**
+- The **last** index of of array is **number of elements - 1** OR **arrayname.length - 1**
+  - In the table below, index **5** or `numarr` would return an **index out of bounds exception**
+
+| Element | Value | Index |
+| ------- | ----- | ----- |
+| 1       | 24    | 0     |
+| 2       | 90    | 1     |
+| 3       | 65    | 2     |
+| 4       | 32    | 3     |
+| 5       | 3     | 4     |
+
+#### Length / size of an array
+
+Arrays have a method, `length` that returns the number of elements of the array.
+
+- `int size = numarr.length;`
+- Example situation: User defines how many elements for an array.
+  - Program defines size of array based on user input.
+  - Program prompts user for values to fill array of defined size.
+
+#### Printing values stored in array
+
+To print an array, need to know how many elements are in the array.  
+Can query the size using `arrayname.length` to get number of elements.  
+Can use the iterator of a `for` loop to access each index value.
+
+```
+for (int i = 0; i <= arrayname.length - 1; i++) {
+  // starting at 0, going to number of elements minus 1
+  System.out.println(i);
+}
+```
+
+Can also use an [**enhanced for loop**](programiz.com/java-programming/enhanced-for-loop) - since an array is a list being accessed index by index,  
+there is a `for` loop designed for that purpose
+
+```
+// Think for each value at each index of the array
+// store the value at the index in `num`, iterate by one each time
+for (int num: numarr) {
+  System.out.println(num); // prints value
+}
+```
+
+### ArrayIndexOutOfBoundsException
+
+If an attempt is made to access a non-existent array index for a given array,
+an **Array Index Out Of Bounds Exceptions** exception will be thrown.  
+Exception can be caught in `try / catch`
+
 - array variables are actually addresses of heap locations
-- printing out an array
-- accessing the last element in an array
-- array index out of bounds exceptions
 
 - review of basic String methods
 - recommended activity: l33t translator
