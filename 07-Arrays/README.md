@@ -11,6 +11,8 @@ An array of a collection / list of similar types
   - `int`, `char`, `double`, `byte`, `short`, `float`, `boolean`
 - Once declared, the size **or length** of an array in Java is fixed
 - An array reserves a **block** of memory to store n-many elements of the datatype specified
+- Array indices are actually addresses of heap locations (location in memory where the array exists when the program runs)
+  - Note: this is easier to see and play with in C / C++ since it supports **pointers**, a data type for addresses
 
 ### Declaring an array
 
@@ -62,7 +64,7 @@ Arrays have a method, `length` that returns the number of elements of the array.
   - Program defines size of array based on user input.
   - Program prompts user for values to fill array of defined size.
 
-#### Printing values stored in array
+#### Printing / manipulating values stored in array
 
 To print an array, need to know how many elements are in the array.  
 Can query the size using `arrayname.length` to get number of elements.  
@@ -75,8 +77,16 @@ for (int i = 0; i <= arrayname.length - 1; i++) {
 }
 ```
 
-Can also use an [**enhanced for loop**](programiz.com/java-programming/enhanced-for-loop) - since an array is a list being accessed index by index,  
-there is a `for` loop designed for that purpose
+#### Converting array `toString` for printing
+
+Sometimes you want an array to print, and three lines of a for loop is too much code. Check out this magic, but note it is **only useful for printing an array**
+
+- `import java.util.Arrays;`
+- `System.out.print("All values in numarr: " + Arrays.toString(numarr));`
+
+#### `for-each loop`
+
+Can also use an [**enhanced for loop aka `for-each` loop**](programiz.com/java-programming/enhanced-for-loop) - since an array is a list being accessed index by index, there is a `for` loop designed for that purpose
 
 ```
 // Think for each value at each index of the array
@@ -89,22 +99,40 @@ for (int num: numarr) {
 ### ArrayIndexOutOfBoundsException
 
 If an attempt is made to access a non-existent array index for a given array,
-an **Array Index Out Of Bounds Exceptions** exception will be thrown.  
+an **Array Index Out Of Bounds Exception** exception will be thrown.  
 Exception can be caught in `try / catch`
 
-- array variables are actually addresses of heap locations
+### Strings and arrays
 
-- review of basic String methods
-- recommended activity: l33t translator
+A String is an array of characters. A String can be split into an array of substrings using the [`split` method](https://www.programiz.com/java-programming/library/string/split).
 
-### Week 10: More on Arrays
+- The String `split()` method can take two parameters:
 
-- loop processing of arrays (including for each)
-- non-static declaration of arrays
+  - `regex` - the string is divided at this regex (can be strings)
+    - regex = regular expressions. Defines a pattern of text to look for
+  - `limit` (optional) - controls the number of resulting substrings
+
+- The String `split()` method returns an array of substrings
+
+```
+String text = "Java is a fun programming language";
+
+// split string, use "space" as separation character to split on
+String[] result = text.split(" ");
+```
+
+### Array Operations
+
 - Common array operations (copy, findMin, shuffle, shift, etc.)
-- java.util.Arrays
+- non-static declaration of arrays
+
+### Command line arguments
+
 - command line arguments
 - var args
+
+### ArrayLists
+
 - ArrayLists and HashMaps (adding, removing, retrieving and iterating)
 
-- https://www.programiz.com/java-programming/enhanced-for-loop
+### HashMaps

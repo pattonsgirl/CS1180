@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class arrays {
     public static void main(String[] args) {
         // char[] name = 'H','e','l';
@@ -16,6 +18,7 @@ public class arrays {
         nums[9] = 32;
 
         int[] newnums = { 12, 42, 56, 7, 32 };
+        System.out.print("All nums in newnums: " + Arrays.toString(newnums));
 
         System.out.print(newnums[3]);
         int size = nums.length;
