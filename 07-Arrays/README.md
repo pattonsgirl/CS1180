@@ -102,6 +102,8 @@ If an attempt is made to access a non-existent array index for a given array,
 an **Array Index Out Of Bounds Exception** exception will be thrown.  
 Exception can be caught in `try / catch`
 
+# Week 09 - More on Arrays
+
 ### Strings and arrays
 
 A String is an array of characters. A String can be split into an array of substrings using the [`split` method](https://www.programiz.com/java-programming/library/string/split).
@@ -124,15 +126,21 @@ String[] result = text.split(" ");
 ### Array Operations
 
 - Common array operations (copy, findMin, shuffle, shift, etc.)
-- non-static declaration of arrays
 
 ### Command line arguments
 
 - command line arguments
 - var args
 
+### Arrays & Methods
+
+- passing
+- returning
+
 ### ArrayLists
 
-- ArrayLists and HashMaps (adding, removing, retrieving and iterating)
+- adding, removing, retrieving and iterating
 
 ### HashMaps
+
+- adding, removing, retrieving and iterating

@@ -1,4 +1,4 @@
-# Week XX - Classes & Objects
+# Week 11 - Classes & Objects
 
 - introduction to objects and classes
 - Object, overriding toString and equals
