@@ -50,3 +50,14 @@ All ArrayList methods below work as: `listName.method(arguments)`
     - Returns `-1` if not found
 
 ### Iterate through ArrayList
+
+The following example uses a `for-each` loop to print all values in an ArrayList
+
+```
+// assuming ArrayList named data was declared
+for (int num: data) {
+  System.out.println(num); // prints value
+}
+```
+
+### [ArrayLists and methods](https://www.programiz.com/java-programming/examples/pass-arraylist-as-function-argument)
