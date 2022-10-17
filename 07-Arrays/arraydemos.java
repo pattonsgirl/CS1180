@@ -19,6 +19,7 @@ public class arraydemos {
 
         // create array of size specified by user
         int[] numarr = new int[size];
+        // int[] numarr = { 4, 12, 16 };
 
         // populate array with values from user
         for (int i = 0; i < numarr.length; i++) {
@@ -91,6 +92,20 @@ public class arraydemos {
             System.out.println("value here is " + (num + 5));
         }
         System.out.print("All values in numarr: " + Arrays.toString(numarr));
+
+        // swap index 0 with index n-1 (elements -1)
+        int[] swappy = { 4, 12, 16 };
+
+        System.out.println("swappy pre-swap: " + Arrays.toString(swappy));
+        // hold value at index 0
+        int temp = swappy[0];
+        int lastindex = swappy.length - 1;
+        // replacing the value at index 0 with value at last index
+        swappy[0] = swappy[lastindex];
+        // replace value at last index with value from index 0 stored in temp
+        swappy[lastindex] = temp;
+
+        System.out.println("swappy post-swap: " + Arrays.toString(swappy));
 
     }
 }
