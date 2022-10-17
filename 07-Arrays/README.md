@@ -125,22 +125,47 @@ String[] result = text.split(" ");
 
 ### Array Operations
 
-- Common array operations (copy, findMin, shuffle, shift, etc.)
-
-### Command line arguments
-
-- command line arguments
-- var args
+- [find min / max value in an array](https://beginnersbook.com/2014/07/java-finding-minimum-and-maximum-values-in-an-array/)
+- [copy an array](https://programiz.xyz/-/copy-arrays-in-java/)
+- [shift array values](https://www.delftstack.com/howto/java/shift-java-array/)
+- [shuffle array values - see sample two](https://www.digitalocean.com/community/tutorials/shuffle-array-java)
+- [sort - specifically `quicksort`](https://www.programiz.com/java-programming/examples/quick-sort)
+- [sort - Arrays.sort](<https://www.javatpoint.com/how-to-sort-an-array-in-java#:~:text=In%20Java%2C%20Arrays%20is%20the,(n%20log(n)).>)
 
 ### Arrays & Methods
 
-- passing
-- returning
+[Software Testing Help - Passing & Returning Arrays](https://www.softwaretestinghelp.com/pass-return-array-in-java/)
 
-### ArrayLists
+### Command line arguments
 
-- adding, removing, retrieving and iterating
+[Programiz - Java Command Line Arguments](https://www.programiz.com/java-programming/command-line-arguments)
 
-### HashMaps
+To talk about command line arguments for a program, first we need to discuss compiling source code and running the compiled code using commands.
 
-- adding, removing, retrieving and iterating
+In VS Code, you get access to a Terminal when you select the Play / Run Java button. This is `Powershell` (if you are a Windows user).
+
+In the Terminal, type `javac` or `java` and hit enter. You should get a very long help menu. Let's look at how to use these commands.
+
+`javac sourcecode.java` will compile a source code file named `sourcecode.java` into a **class** file named `sourcecode.class` This will be a file that is created by this command.
+
+`java sourcecode` (note the `.class` extension is not used) will run the `.class` file named `sourcecode`, if it exists. If this "does not work", check you compiled your source code.
+
+```
+public static void main(String[] args)
+```
+
+You've been creating a `class` with a `main` method. `main` is a method with a parameter defined - an `array` of type `String` called `args`
+
+To **populate** the array, you pass arguments via the command line.
+
+`java sourcecode 3 4 hello "my name"`
+
+In `main`, you can write code to access these values, and check if values were given
+
+```
+int argc = args.length; // get number of elements passed
+
+System.out.println(args[3] + " is " + args[2]); // Outputs: my name is hello
+
+int val1 = Integer.parseInt(args[0]); // converts "3" to 3 for usage as an int
+```
