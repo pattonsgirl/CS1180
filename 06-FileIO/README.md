@@ -32,6 +32,7 @@ catch(exception) {
 ### Reading from a file
 
 - `import` `java.io.FileInputStream` & `java.util.Scanner`
+- Essentials: open FileInputStream using specific file, create Scanner object to read byte stream
 
 ```
 // assuming readdata.txt is in your current working directory
@@ -44,6 +45,17 @@ Scanner inFS = new Scanner(fileByteStream);
 .
 // close file when done
 inFS.close();
+```
+
+How do you "know" when a file has another item to look at?
+- the `hasNext()` method "looks ahead" to see if there is another value to read in
+- Used in a `while` loop, values can be read until `hasNext` returns false
+- [JavaTPoint - Scanner hasNext()](https://www.javatpoint.com/post/java-scanner-hasnext-method)
+```
+// check in there is a "next" value
+while (inFS.hasNext()) {
+  // read value
+}
 ```
 
 ### Writing to a file
