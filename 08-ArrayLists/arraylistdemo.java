@@ -99,6 +99,7 @@ public class arraylistdemo {
         }
 
         Collections.sort(listOfCountries, Comparator.reverseOrder());
+        Collections.shuffle(listOfCountries);
 
         for (String word : listOfCountries) {
             System.out.print(word + " "); // prints value
