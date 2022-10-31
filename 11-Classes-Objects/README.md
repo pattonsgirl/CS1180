@@ -19,7 +19,7 @@
   - if you need to get a class from another package, you need to `import` it
   - [importing packages](https://www.programiz.com/java-programming/packages-import)
 
-### Weeks 12 and 13: Practice with Classes and Objects
+# Weeks 12 and 13: Practice with Classes and Objects
 
 - overriding toString and equals
 - override equals and hashcode
