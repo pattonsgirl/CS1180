@@ -10,7 +10,7 @@ public class Candy {
     private boolean isTasty;
     private int quantity;
     // object such as ArrayLists can be declared within a class object
-    private ArrayList<String> words;
+    // private ArrayList<String> words;
 
     // default Candy constructor
     // in main, user did new Candy()
