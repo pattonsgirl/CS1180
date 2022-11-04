@@ -23,7 +23,6 @@
 
 # Weeks 12 and 13: Practice with Classes and Objects
 
-- overriding toString and equals
-- override equals and hashcode
+- overriding hashcode
 - implementing Comparable
 - design and code a banking app
