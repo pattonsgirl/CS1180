@@ -30,6 +30,13 @@ public class Candy {
         this.quantity = quantity;
     }
 
+    public void setCandyProperties(String name, boolean isTasty, int quantity) {
+        this.name = name;
+        this.setName(name);
+        this.isTasty = isTasty;
+        this.quantity = quantity;
+    }
+
     // mutator == setter
     // modifies the object's quantity property based on parameter q
     // from another class, objectName.setQuantity(5);
@@ -52,11 +59,40 @@ public class Candy {
         return name;
     }
 
+    public void setIsTasty(boolean isTasty) {
+        this.isTasty = isTasty;
+    }
+
+    public boolean getIsTasty() {
+        return this.isTasty;
+    }
+
     // this would be an accessor method
     // This method is defined for objects created by this class
     // to call from another class, use objectName.print();
     public void print() {
         System.out.println(name + ": " + quantity + " " + isTasty);
+    }
+
+    public String toString() {
+        return String.format("%s: %b - %d", this.name, this.isTasty, this.quantity);
+        // return String.format("%s: %d in package. Tasty? %b\n", this.name,
+        // this.quantity, this.isTasty);
+
+    }
+
+    public boolean equals(Candy c) {
+        // System.out.println("Comparing " + this + " to " + c);
+        // Beware the String compare!
+        // Note: this will not call .equals for this class - these are Strings
+        boolean sameName = this.name.equals(c.name);
+        // boolean sameName = this.name == c.name; // IS WRONG
+        boolean sameIsTasty = this.isTasty == c.isTasty;
+        boolean sameQuantity = this.quantity == c.quantity;
+        if (sameName && sameIsTasty && sameQuantity) {
+            return true;
+        }
+        return false;
     }
 
 }

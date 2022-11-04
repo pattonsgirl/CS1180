@@ -27,13 +27,59 @@ public class App {
 
         ArrayList<Candy> candyList = new ArrayList<>();
         // read in candies from standard in
-        Candy nextCandy = new Candy();
+        System.out.println("How many candies will you describe?");
+        int iterations = scnr.nextInt();
         System.out.println("Give me a name, true false if tasty, and a quantity in the package");
-        nextCandy.setName(scnr.next());
 
-        // TODO: loop and get 5 candy descriptions from the user
+        // Loop and get candy descriptions from the user
+        for (int i = 0; i < iterations; i++) {
+            Candy nextCandy = new Candy();
+            nextCandy.setName(scnr.next());
+            nextCandy.setIsTasty(scnr.nextBoolean());
+            nextCandy.setQuantity(scnr.nextInt());
+            // creating a setCandyProperties method may be cleaners
+            // nextCandy.setCandyProperties(scnr.next(), scnr.nextBoolean(),
+            // scnr.nextInt());
+            candyList.add(nextCandy);
+        }
+        System.out.println("Check out my candy info!");
+        // candyList.size();
+        for (Candy c : candyList) {
+            // print method defined in Candy class
+            // c.print();
+            // created a toString method in Candy class
+            // if method exists, will override stanard toString
+            // which would print the reference to the object.
+            System.out.println(c);
+        }
 
-        // TODO: get Candy into Bowls OR Stores
+        // print only tasty candies:
+        System.out.println("According to me, tasty candies are:");
+        for (Candy c : candyList) {
+            // for each Candy object, get the value of the isTasty property
+            if (c.getIsTasty() == true) {
+                System.out.print(c);
+            }
+        }
+
+        // Seeing if I have duplicate candies
+        // get is returning a Candy object at that index
+        for (int i = 0; i < candyList.size(); i++) {
+            for (int j = i + 1; j < candyList.size(); j++) {
+                // created an equals method in Candy class
+                // checks if two Candy objects are equal
+                if (candyList.get(i).equals(candyList.get(j))) {
+                    System.out.println("Duplicate object is " + candyList.get(j));
+                    // if there is a duplicate, remove it
+                    candyList.remove(candyList.get(j));
+                }
+            }
+        }
+
+        // TODO: add ArrayList of Candy object into objects made from Bowl class
+
+        // TODO: Let a user eat a Candy at an index - remove the Candy
+        // object from the Bowl's ArrayList
 
     }
 }

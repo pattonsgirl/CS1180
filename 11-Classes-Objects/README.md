@@ -9,10 +9,12 @@
   - focus on **public** and **private**
 - ["this" keyword](https://www.programiz.com/java-programming/this-keyword)
 - [constructors](https://www.programiz.com/java-programming/constructors)
+- [Class Diagrams & UMLs](https://java-programming.mooc.fi/part-11/1-class-diagrams)
 - [static versus instance (non-static) keyword](https://www.programiz.com/java-programming/static-keyword)
 - [passing objects by reference](https://www.programiz.com/java-programming/examples/passing-method-as-argument)
 - breaking down a task to a series of classes
   - [trinknet - Chapter 11 Designing Classes](https://books.trinket.io/thinkjava2/chapter11.html)
+  - **link includes demos of overriding `toString` (11.6) and `equals` (11.7)**
 - packages
   - everything we are doing is with the same package
     - think knows "how to find" the class
