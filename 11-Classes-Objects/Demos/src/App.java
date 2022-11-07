@@ -23,7 +23,6 @@ public class App {
 
         Store store1 = new Store("Totally Not Kroger");
         store1 = new Store("Other store");
-        Bowl bowl1 = new Bowl("living room");
 
         ArrayList<Candy> candyList = new ArrayList<>();
         // read in candies from standard in
@@ -75,11 +74,6 @@ public class App {
                 }
             }
         }
-
-        // TODO: add ArrayList of Candy object into objects made from Bowl class
-
-        // TODO: Let a user eat a Candy at an index - remove the Candy
-        // object from the Bowl's ArrayList
 
     }
 }
