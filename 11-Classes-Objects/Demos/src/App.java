@@ -1,6 +1,11 @@
 import java.util.*;
 
 public class App {
+
+    /**
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         Scanner scnr = new Scanner(System.in);
         // class Thing, object foo of type Thing

@@ -16,18 +16,30 @@ public class Bowl {
         candies = new ArrayList<Candy>();
     }
 
+    /**
+     * @param location
+     */
     public void setLocation(String location) {
         this.location = location;
     }
 
+    /**
+     * @return String
+     */
     public String getLocation() {
         return this.location;
     }
 
+    /**
+     * @param c
+     */
     public void addCandy(Candy c) {
         this.candies.add(c);
     }
 
+    /**
+     * @return ArrayList<Candy>
+     */
     public ArrayList<Candy> getCandies() {
         // ArrayList<Candy> theseCandies = new ArrayList<Candy>();
         return candies;
@@ -39,16 +51,25 @@ public class Bowl {
         }
     }
 
+    /**
+     * @param b
+     */
     public static void getCandies(Bowl b) {
         for (Candy c : b.candies) {
             System.out.println(c);
         }
     }
 
+    /**
+     * @param candyIndex
+     */
     public void eatCandy(int candyIndex) {
         candies.remove(candyIndex);
     }
 
+    /**
+     * @param c
+     */
     public void eatCandy(Candy c) {
         // TODO: get fancy - verify the candy exists before removing it
         boolean candyEaten = false;

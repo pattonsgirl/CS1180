@@ -30,6 +30,11 @@ public class Candy {
         this.quantity = quantity;
     }
 
+    /**
+     * @param name
+     * @param isTasty
+     * @param quantity
+     */
     public void setCandyProperties(String name, boolean isTasty, int quantity) {
         this.name = name;
         this.setName(name);
@@ -37,6 +42,9 @@ public class Candy {
         this.quantity = quantity;
     }
 
+    /**
+     * @param q
+     */
     // mutator == setter
     // modifies the object's quantity property based on parameter q
     // from another class, objectName.setQuantity(5);
@@ -44,25 +52,40 @@ public class Candy {
         quantity = q;
     }
 
+    /**
+     * @return int
+     */
     // accessor == getter
     // gets the value of the object's quantity property and returns it
     public int getQuantity() {
         return quantity;
     }
 
+    /**
+     * @param n
+     */
     // setters and getters for other properties
     public void setName(String n) {
         name = n;
     }
 
+    /**
+     * @return String
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param isTasty
+     */
     public void setIsTasty(boolean isTasty) {
         this.isTasty = isTasty;
     }
 
+    /**
+     * @return boolean
+     */
     public boolean getIsTasty() {
         return this.isTasty;
     }
@@ -74,6 +97,9 @@ public class Candy {
         System.out.println(name + ": " + quantity + " " + isTasty);
     }
 
+    /**
+     * @return String
+     */
     public String toString() {
         return String.format("%s: %b - %d", this.name, this.isTasty, this.quantity);
         // return String.format("%s: %d in package. Tasty? %b\n", this.name,
@@ -81,6 +107,10 @@ public class Candy {
 
     }
 
+    /**
+     * @param c
+     * @return boolean
+     */
     public boolean equals(Candy c) {
         // System.out.println("Comparing " + this + " to " + c);
         // Beware the String compare!
