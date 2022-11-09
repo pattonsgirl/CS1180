@@ -127,6 +127,7 @@ public class Candy implements Comparable<Candy> {
 
     @Override
     public int compareTo(Candy c) {
+        // this will sort ASCENDING by default
         int isfirst = 0;
         isfirst = this.name.compareTo(c.name);
 
@@ -136,6 +137,10 @@ public class Candy implements Comparable<Candy> {
         }
 
         return isfirst;
+
+        // TODO: what if you you want descending?
+        // if isfirst returned a negative int, return a postitive 1
+        // if isfirst returned a positive int, return a negative 1
     }
 
 }
