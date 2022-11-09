@@ -48,7 +48,21 @@ public class AppwSortCandy {
         // sort is part of Collections. sort calls compareTo() for known objects
 
         // compare two Strings
-        // compare two integers
+        String str1 = "Hershey";
+        String str2 = "KitKat";
+        String str3 = "Hershey";
+        String str4 = "AlmondJoy";
+
+        int result = 0;
+        result = str1.compareTo(str3); // return 0 - strings are the same
+        System.out.println("int value of string compare: " + result);
+        result = str1.compareTo(str2);
+        System.out.println("int value of string compare: " + result);
+        result = str1.compareTo(str4);
+        System.out.println("int value of string compare: " + result);
+
+        bowl1.sortCandies();
+        Bowl.getCandies(bowl1);
 
     }
 }

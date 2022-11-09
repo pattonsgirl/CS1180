@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Candy {
+public class Candy implements Comparable<Candy> {
 
     // candy properties to be defined for each object
     // these properties CANNOT be directly accessed
@@ -8,7 +8,7 @@ public class Candy {
     // constructor sets default values of properties
     private String name;
     private boolean isTasty;
-    private int quantity;
+    private Integer quantity;
     // object such as ArrayLists can be declared within a class object
     // private ArrayList<String> words;
 
@@ -123,6 +123,19 @@ public class Candy {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public int compareTo(Candy c) {
+        int isfirst = 0;
+        isfirst = this.name.compareTo(c.name);
+
+        // if strings are equal look at quantity
+        if (isfirst == 0) {
+            isfirst = this.quantity.compareTo(c.quantity);
+        }
+
+        return isfirst;
     }
 
 }

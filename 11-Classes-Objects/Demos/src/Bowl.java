@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Bowl {
     private String location;
@@ -88,5 +90,10 @@ public class Bowl {
 
     public static void setLocal() {
         // this. // can ono longeer access object private fields
+    }
+
+    public void sortCandies() {
+        System.out.println("Sorting candies!");
+        Collections.sort(this.candies);
     }
 }
