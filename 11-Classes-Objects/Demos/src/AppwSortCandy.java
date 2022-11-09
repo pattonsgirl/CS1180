@@ -44,8 +44,11 @@ public class AppwSortCandy {
 
         // TODO: Sort Candy in a Bowl
 
-        // TODO: review the basics of compareTo & sort
-        // sort is part of Collections. sort calls compareTo() for known objects
+        // compareTo returns 0 if items are the same
+        // val1.compareTo(val2) returns NEGATIVE int
+        // if va1 is BEFORE val2 numerically OR in dictionary order
+        // val1.compareTo(val2) returns POSITIVE int
+        // if va1 is AFTER val2 numerically OR in dictionary order
 
         // compare two Strings
         String str1 = "Hershey";
@@ -61,6 +64,9 @@ public class AppwSortCandy {
         result = str1.compareTo(str4);
         System.out.println("int value of string compare: " + result);
 
+        // TODO: review the basics of compareTo & sort
+        // sort is part of Collections. sort calls compareTo() for known objects
+        // sortCandies() in Bowl class calls Collections.sort
         bowl1.sortCandies();
         Bowl.getCandies(bowl1);
 

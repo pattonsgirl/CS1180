@@ -93,7 +93,11 @@ public class Bowl {
     }
 
     public void sortCandies() {
+        // nice little debug / confirmation that I got this far
         System.out.println("Sorting candies!");
+        // import Collections in Bowl
+        // calling sort on ArrayList of Candy objects
+        // sort will see if Candy has compareTo method
         Collections.sort(this.candies);
     }
 }

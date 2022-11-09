@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+// need to implement Comparable to have compareTo method unique to class
 public class Candy implements Comparable<Candy> {
 
     // candy properties to be defined for each object
