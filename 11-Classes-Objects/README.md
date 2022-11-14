@@ -21,7 +21,7 @@
   - if you need to get a class from another package, you need to `import` it
   - [importing packages](https://www.programiz.com/java-programming/packages-import)
 
-## Week 12 - Classes cont.
+## Week 12 & 13 - Classes cont.
 
 - [Overriding compareTo()](https://java-programming.mooc.fi/part-10/2-interface-comparable)
   - for a `class`, add `implements Comparable`
