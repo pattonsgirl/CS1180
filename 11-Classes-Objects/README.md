@@ -29,7 +29,3 @@
 - [Overriding hashCode](https://java-programming.mooc.fi/part-8/3-similarity-of-objects)
   - See **Approximate Comparison With HashMap**
   - "creates from the object a "hash code", i.e, a number, that tells a bit about the object's content. If two objects have the same hash value, they may be equal. On the other hand, if two objects have different hash values, they are certainly unequal."
-
-# Weeks 13 & 14: Practice with Classes and Objects
-
-- design and code a banking app
