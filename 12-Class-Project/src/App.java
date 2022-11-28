@@ -136,7 +136,7 @@ public class App {
                 case 9:
                     // SORT accounts, then print accounts
                     Collections.sort(accounts);
-                    // TODO: why does this work?
+                    // takes ArrayList of Account objects, converts to a String
                     // System.out.println(accounts.toString());
                     for (Account a : accounts) {
                         System.out.println(a);

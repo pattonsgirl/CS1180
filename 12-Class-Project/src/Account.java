@@ -132,49 +132,60 @@ public class Account implements Comparable<Account> {
         return this.accountNumber + ", " + this.accountOwner + ", " + this.accountType + ", " + this.money;
     }
 
-    // TODO: needs to implement what?
-    // This defines how our account objects are compared for sorting
-
+    /**
+     * Returns ASCENDING order sort based first on
+     * <p>
+     * accountOwner, then by money in Account object
+     * <p>
+     * Step 1: What is the setup for the class definition?
+     * <p>
+     * Step 2: what ranks one Account "before" another
+     * <p>
+     * Step 3: return postive if A is before B
+     * <p>
+     * return 0 if neither is "before" the other
+     * <p>
+     * return negative if B is before A
+     * <p>
+     * Note: first needed to have this class implement
+     * Comparable Account object
+     * 
+     * @param a Account object to compare with
+     * @return int determining object order
+     */
     @Override
     public int compareTo(Account a) {
         // ascending order
-        // sort first by name
+        // - return positive if this.properties comes BEFORE a.properties
+        // sort rule one - check accountOwner strings
+        // if compare is POSTIVE number, this.accountOwner is alphabetically
+        // BEFORE a.accountOwner
         if (this.accountOwner.compareTo(a.accountOwner) > 0) {
             return 1;
         }
 
-        // I now know either the account owner is equal (0) or
-        // comes AFTER (is negative)
+        // check if this.accountOwner is alphabetically AFTER a.accountOwner
         else if (this.accountOwner.compareTo(a.accountOwner) < 0) {
             return -1;
         } else {
+            // sort rule 2 - if accountOwner is same, sort by money in account
+            // alternative sort rule 2 - sort by accountType
             // owner name is the same, sort by money
+            // if (this.money > a.money) { // would give same result
             if (this.money.compareTo(a.money) > 0) {
                 return 1;
             } else if (this.money.compareTo(a.money) < 0) {
                 return -1;
             } else {
+                // both accounts have same owner & same amount of funds
+                // sort rule 3 - sort by accountNumber?
                 return 0;
             }
         }
 
-        // is an account number sort useful?
+        // this return statement never hits because nested if / else if / else
+        // above takes care of all cases
         // return 0;
     }
 
-    /*
-     * Step 1: implement sort - what is the setup?
-     * Step 2: what ranks one Account "before" another
-     * Step 3: return postive if A is before B
-     * return 0 if neither is "before" the other
-     * return negative if B is before A
-     */
-    /*
-     * @Override
-     * public int compareTo(Object o) {
-     * // TODO Auto-generated method stub
-     * // is it an account object?
-     * return 0;
-     * }
-     */
 }
