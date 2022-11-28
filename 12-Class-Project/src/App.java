@@ -134,9 +134,13 @@ public class App {
                     System.out.println("Under Construction");
                     break;
                 case 9:
-                    // TODO: SORT accounts, then print accounts
+                    // SORT accounts, then print accounts
+                    Collections.sort(accounts);
                     // TODO: why does this work?
-                    System.out.println(accounts.toString());
+                    // System.out.println(accounts.toString());
+                    for (Account a : accounts) {
+                        System.out.println(a);
+                    }
                     break;
                 case 10:
                     // TODO: prompt to save before exit?

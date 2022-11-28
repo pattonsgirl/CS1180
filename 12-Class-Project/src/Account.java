@@ -12,7 +12,7 @@
 import java.util.Random;
 import java.lang.Comparable;
 
-public class Account implements Comparable {
+public class Account implements Comparable<Account> {
     // public class Account implements Comparable<Account>{
 
     private Integer accountNumber;
@@ -134,17 +134,47 @@ public class Account implements Comparable {
 
     // TODO: needs to implement what?
     // This defines how our account objects are compared for sorting
+
+    @Override
+    public int compareTo(Account a) {
+        // ascending order
+        // sort first by name
+        if (this.accountOwner.compareTo(a.accountOwner) > 0) {
+            return 1;
+        }
+
+        // I now know either the account owner is equal (0) or
+        // comes AFTER (is negative)
+        else if (this.accountOwner.compareTo(a.accountOwner) < 0) {
+            return -1;
+        } else {
+            // owner name is the same, sort by money
+            if (this.money.compareTo(a.money) > 0) {
+                return 1;
+            } else if (this.money.compareTo(a.money) < 0) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+
+        // is an account number sort useful?
+        // return 0;
+    }
+
+    /*
+     * Step 1: implement sort - what is the setup?
+     * Step 2: what ranks one Account "before" another
+     * Step 3: return postive if A is before B
+     * return 0 if neither is "before" the other
+     * return negative if B is before A
+     */
     /*
      * @Override
-     * public int compareTo(Account a) {
+     * public int compareTo(Object o) {
+     * // TODO Auto-generated method stub
+     * // is it an account object?
      * return 0;
      * }
      */
-
-    @Override
-    public int compareTo(Object o) {
-        // TODO Auto-generated method stub
-        // is it an account object?
-        return 0;
-    }
 }
