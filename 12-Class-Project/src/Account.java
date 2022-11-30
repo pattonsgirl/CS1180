@@ -49,6 +49,17 @@ public class Account implements Comparable<Account> {
     }
 
     /**
+     * Class constructor loading account from file (account number exists)
+     * 
+     */
+    public Account(Integer accNum, String owner, String type, Double money) {
+        this.accountNumber = accNum;
+        this.accountOwner = owner;
+        this.accountType = type;
+        this.money = money;
+    }
+
+    /**
      * Returns unique account number hashed from string + random int
      * <p>
      * Private because accountNumbers should not be something modified
@@ -61,7 +72,8 @@ public class Account implements Comparable<Account> {
         Random randGen = new Random();
         Integer accountNum = s.hashCode() + randGen.nextInt(2000);
         System.out.println("Generated account number " + accountNum);
-        return accountNum;
+        // got annoyed by negative numbers for accounts
+        return Math.abs(accountNum);
     }
 
     /**
