@@ -6,6 +6,7 @@
  */
 
 import java.util.*;
+import java.io.*;
 
 public class App {
     /*
@@ -44,6 +45,7 @@ public class App {
         String type = scnr.nextLine();
         System.out.print("Initial funds: ");
         Double money = scnr.nextDouble();
+        System.out.flush();
         return new Account(owner, type, money);
     }
 
@@ -68,9 +70,74 @@ public class App {
         String type = scnr.nextLine();
         System.out.print("Initial funds: ");
         Double money = scnr.nextDouble();
+        System.out.flush();
         a.setAccountOwner(owner);
         a.setAccountType(type);
         a.setAccountFunds(money);
+    }
+
+    public static void saveBank(ArrayList<Account> accounts, Scanner scnr) {
+        String filename;
+        FileOutputStream fileOutStream;
+        PrintWriter outFS;
+        Collections.sort(accounts);
+
+        while (true) {
+            try {
+                System.out.print("Provide a file name: ");
+                filename = scnr.next();
+                System.out.flush();
+                fileOutStream = new FileOutputStream(filename);
+
+                break;
+            } catch (FileNotFoundException e) {
+                System.out.println("File does not exist.");
+                scnr.next();
+                System.out.flush();
+                continue;
+            }
+        }
+        try {
+            outFS = new PrintWriter(fileOutStream);
+            for (Account a : accounts) {
+                outFS.println(a);
+            }
+            outFS.close();
+            fileOutStream.close();
+        } catch (IOException e) {
+            System.out.println("Error occured while writing to file.");
+        }
+        System.out.println("Accounts written to " + filename);
+    }
+
+    public static void readBank(ArrayList<Account> accounts, Scanner scnr) {
+        String filename;
+        FileInputStream fileByteStream;
+        Scanner inFS;
+        while (true) {
+            try {
+                System.out.print("Enter a filename: ");
+                filename = scnr.next();
+                System.out.flush();
+                fileByteStream = new FileInputStream(filename);
+                break;
+            } catch (FileNotFoundException e) {
+                System.out.println("File not found");
+                scnr.next();
+                System.out.flush();
+                continue;
+            }
+        }
+        // if file is found, read it into accounts ArrayList
+        inFS = new Scanner(fileByteStream);
+        while (inFS.hasNextLine()) {
+            String[] line = inFS.nextLine().split(", ");
+            // System.out.print(line[0]);
+            Account a = new Account(Integer.parseInt(line[0]), line[1], line[2], Double.parseDouble(line[3]));
+            accounts.add(a);
+        }
+        inFS.close();
+        // fileByteStream.close();
     }
 
     /**
@@ -83,18 +150,21 @@ public class App {
         Scanner scnr = new Scanner(System.in);
         int userchoice = 0;
         boolean keepprompting = true;
+        Integer accNum; // placeholder for inputs
+        boolean accountFound = false;
         ArrayList<Account> accounts = new ArrayList<>();
-
+        printMenu();
         do {
-            printMenu();
             while (keepprompting) {
                 // prompt user for input
                 try {
                     userchoice = scnr.nextInt();
+                    System.out.flush();
                     break;
                 } catch (InputMismatchException e) {
                     System.out.println("Invalid data type given.  Expected integer.  Gobbling bad input");
                     scnr.next();
+                    System.out.flush();
                     continue;
                 }
             }
@@ -106,32 +176,141 @@ public class App {
                     accounts.add(accountCreate());
                     break;
                 case 2:
-                    // TODO: account details by username
-                    System.out.println("Under Construction");
+                    // Account details by username
+                    // System.out.println();
+                    System.out.flush();
+                    scnr.nextLine();
+                    System.out.print("Provide username: ");
+                    String owner = scnr.nextLine();
+                    for (Account a : accounts) {
+                        if (a.getAccountOwner().equals(owner)) {
+                            System.out.println(a);
+                        }
+                    }
                     break;
                 case 3:
-                    // TODO: account details by account number
-                    System.out.println("Under Construction");
+                    // Account details by account number
+                    System.out.print("Provide account number: ");
+                    accNum = scnr.nextInt();
+                    System.out.flush();
+                    for (Account a : accounts) {
+                        if (a.getAccountNumber().equals(accNum)) {
+                            System.out.println(a);
+                        }
+                    }
                     break;
                 case 4:
-                    // TODO: deposit to account number
-                    System.out.println("Under Construction");
+                    // Deposit to account number
+                    // System.out.flush();
+                    System.out.print("Provide account number: ");
+                    accNum = scnr.nextInt();
+                    System.out.flush();
+                    accountFound = false;
+                    for (Account a : accounts) {
+                        if (a.getAccountNumber().equals(accNum)) {
+                            accountFound = true;
+                            System.out.println("Account found.");
+                            System.out.println(a);
+                            System.out.println("Enter deposit amount: ");
+                            Double deposit = scnr.nextDouble();
+                            System.out.flush();
+                            a.setAccountFunds(a.getAccountFunds() + deposit);
+                            System.out.println(a);
+                        }
+                    }
+                    if (!accountFound) {
+                        System.out.println("Account " + accNum + " not found");
+                    }
                     break;
                 case 5:
-                    // TODO: withdraw from account number
-                    System.out.println("Under Construction");
+                    // Withdraw from account number
+                    // System.out.flush();
+                    System.out.print("Provide account number: ");
+                    accNum = scnr.nextInt();
+                    System.out.flush();
+                    accountFound = false;
+                    for (Account a : accounts) {
+                        if (a.getAccountNumber().equals(accNum)) {
+                            accountFound = true;
+                            System.out.println("Account found.");
+                            System.out.println(a);
+                            System.out.print("Enter withdrawl amount: ");
+                            Double withdraw = scnr.nextDouble();
+                            System.out.flush();
+                            if ((a.getAccountFunds() - withdraw) >= 0) {
+                                a.setAccountFunds(a.getAccountFunds() - withdraw);
+                            } else {
+                                System.out.println("Insufficent funds for withdrawl");
+                            }
+                            System.out.println(a);
+                        }
+                    }
+                    if (!accountFound) {
+                        System.out.println("Account " + accNum + " not found");
+                    }
                     break;
                 case 6:
-                    // TODO: transfer between accounts
-                    System.out.println("Under Construction");
+                    // Transfer between accounts
+                    // Transfer FROM first - if insufficient funds, transfer should not continue
+                    System.out.print("Provide account number to transfer funds FROM: ");
+                    accNum = scnr.nextInt();
+                    System.out.flush();
+                    accountFound = false;
+                    Double transfer = 0.00;
+                    boolean insuffFunds = true;
+                    for (Account a : accounts) {
+                        if (a.getAccountNumber().equals(accNum)) {
+                            accountFound = true;
+                            System.out.println("Account found.");
+                            System.out.println(a);
+                            System.out.print("Enter amount to transfer: ");
+                            transfer = scnr.nextDouble();
+                            System.out.flush();
+                            if ((a.getAccountFunds() - transfer) >= 0) {
+                                insuffFunds = false;
+                                a.setAccountFunds(a.getAccountFunds() - transfer);
+                            } else {
+                                System.out.println("Insufficent funds for transfer");
+                                insuffFunds = true;
+                            }
+                            System.out.println(a);
+                        }
+                    }
+                    if (insuffFunds) {
+                        System.out.println("Canceling transfer");
+                        break;
+                    }
+                    if (!accountFound) {
+                        System.out.println("Account " + accNum + " not found");
+                        break;
+                    }
+                    System.out.print("Provide account number to transfer funds TO: ");
+                    accNum = scnr.nextInt();
+                    System.out.flush();
+                    accountFound = false;
+                    for (Account a : accounts) {
+                        if (a.getAccountNumber().equals(accNum)) {
+                            accountFound = true;
+                            System.out.println("Account found.");
+                            a.setAccountFunds(a.getAccountFunds() + transfer);
+                            System.out.println(a);
+                        }
+                    }
+                    if (!accountFound) {
+                        System.out.println("Account " + accNum + " not found");
+                        break;
+                    }
                     break;
                 case 7:
-                    // TODO: save accounts to file
-                    System.out.println("Under Construction");
+                    // Save accounts to file
+                    System.out.flush();
+                    saveBank(accounts, scnr);
                     break;
                 case 8:
-                    // TODO: read accounts from file
-                    System.out.println("Under Construction");
+                    // Read accounts from file
+                    System.out.flush();
+                    accounts.clear();
+                    readBank(accounts, scnr);
                     break;
                 case 9:
                     // SORT accounts, then print accounts
@@ -146,12 +325,17 @@ public class App {
                     // TODO: prompt to save before exit?
                     System.exit(0);
                     break;
+                case 11:
+                    printMenu();
+                    break;
                 default:
                     System.out.println(userchoice + " is not an option");
+                    printMenu();
                     break;
             }
 
         } while (userchoice != 10);
 
+        scnr.close();
     }
 }
