@@ -61,3 +61,4 @@ Else:
 2. Add the location to JDK binaries to your PATH environment variable:
     - Example path to JDK: `C:\Program Files\Eclipse Adoptium\jdk-17.0.8.7-hotspot\bin`
     - Windows: Go to System Properties -> Edit System Environment variables -> look for **Path**, select **Edit**, select **New**, enter path to JDK, move to top of list.  Removing the "old" JDK path is optional as long as the "new" one is listed before the old one.
+3. Restart all terminals (or your PC).  Verify changes took effect using `java --version`
