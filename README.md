@@ -47,3 +47,17 @@ Course Content for Duncan's CS1180 - Computer Science I - at Wright State Univer
 - Restart VSCode in order for extensions to take effect
 - https://stackoverflow.com/questions/57148090/java-project-in-vs-code-no-delegatecommandhandler-for-vscode-java-validatelaun
 - https://github.com/Microsoft/vscode-java-debug/blob/main/Troubleshooting.md
+
+## Multiple JDK Versions
+
+Problem: you've been asked to install a new version of the JDK, but how do you check?  
+In a terminal (Powershell or Powershell in VSCode), type: `java --version`  
+If you see the accurate version you just installed, skip the rest, get to coding.  
+Else:
+1. Find where your JDK is installed:
+    - Powershell / CMD: `where java`
+    - Mac / Linux: `which java`
+    - Example path to java executable within JDK: `C:\Program Files\Eclipse Adoptium\jdk-17.0.8.7-hotspot\bin\java.exe`
+2. Add the location to JDK binaries to your PATH environment variable:
+    - Example path to JDK: `C:\Program Files\Eclipse Adoptium\jdk-17.0.8.7-hotspot\bin`
+    - Windows: Go to System Properties -> Edit System Environment variables -> look for **Path**, select **Edit**, select **New**, enter path to JDK, move to top of list.  Removing the "old" JDK path is optional as long as the "new" one is listed before the old one.
