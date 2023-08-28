@@ -4,19 +4,37 @@ Course Content for Duncan's CS1180 - Computer Science I - at Wright State Univer
 
 ## Environment Setup
 
+These instruction apply generically to any OS.  
+
 1. Install Adopt Open JDK 17 (select the default options)
    - Download from [ninite.com](https://ninite.com/)
-     - Mac / Linux Users: https://adoptium.net/temurin/releases/?version=17
+     - Link to all versions: https://adoptium.net/temurin/releases/?version=17
+     - Mac users, see [Mac Notes](#mac-notes)
    - JDK = Java Development Kit
    - Includes a java code compiler and virtual environment where your compiled code runs
    - NOTE: JRE = Java Runtime Environment. Runs compiled Java code.  You cannot compile Java source code if you only have a JRE installed.
 2. Install Visual Studio Code
    - Download from [ninite.com](https://ninite.com/)
-     - Mac / Linux users: https://visualstudio.microsoft.com/downloads/
+     - Link to all versions: https://visualstudio.microsoft.com/downloads/
    - Code is a text editor at the start - extensions give it support for languages you want to work with
 3. In VSCode, go to Extensions, search for the WSU CSE extension
    - This extension includes extensions for other languages you’ll find in future courses
+   - Link to extension: https://marketplace.visualstudio.com/items?itemName=WrightStateUniversity-ComputerScience.wsu-cse
 4. Restart VSCode in order for extensions to take effect
+
+### Installing JDK via VSCode
+
+This is recommended for Mac Users
+
+1. Install Visual Studio Code
+2. Install the WSU CSE Extension pack - this includes the "Language Support for Java(TM) by Red Hat".  
+3. Once this extension is installed, you'll be prompted to "Install JDK" - click in and make sure JDK 17 is selected.
+
+### Mac Notes
+
+There are now two Mac chips - Intel / AMD (x64) and ARM64 (aarch64).  You do need to know which you have to install the correct software.
+
+These [instructions from Adoptium](https://adoptium.net/installation/macOS/) are to install from the `.pkg` file once you select the correct one for your hardware.
 
 ## Special Notes on VSCode
 
