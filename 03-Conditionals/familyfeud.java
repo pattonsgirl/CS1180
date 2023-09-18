@@ -8,7 +8,7 @@ public class familyfeud {
         String userResponse = scnr.nextLine();
         // check user reponse
         if (userResponse.equalsIgnoreCase("yes")) {
-
+            
         }
         // TODO: prompt a user
         int gameScore = scnr.nextInt();
