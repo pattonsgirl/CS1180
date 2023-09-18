@@ -4,14 +4,16 @@ public class ternarydemo {
         //x = 0;
         //y = 0;
 
+        // condition -> (x<20)
+        // value of y is set based on condition
         if (x < 20) {
-            y = x;
+            y = x; //x is value of y when condition is true
         }
         else {
-            y = 20;
+            y = 20; //20 is value of y when condition is false
         } 
-        // TODO: fix this
-        //x < 20 ? y = x : y = 20;
+        // WRONG: (x < 20) ? y = x : y = 20;
+        y = (x < 20) ? x : 20;
 
         System.out.println("Value of y: " + y);
     }
