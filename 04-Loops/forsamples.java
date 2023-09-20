@@ -26,7 +26,7 @@ public class forsamples {
 
         // Print 10 to 0 using a for loop
         System.out.println("printing countdown 10 to 0");
-        for (i = 10; i >= 0; --i) {
+        for (i = 10; i >= 0; i--) {
             System.out.println(i);
         }
     }
