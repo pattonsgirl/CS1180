@@ -7,15 +7,24 @@ public class bignumber {
         System.out.println("How many numbers to evaluate: ");
         int numOfNums = scnr.nextInt();
         int num1 = 0;
+        //integer to hold big num
+        //int bigNum = scnr.nextInt();
+        int bigNum = 0;
         // for loop to do what:
+
         for (int i = numOfNums - 1; i >= 0; i--){
             System.out.println("Give me a number: ");
             //scan for nums
             num1 = scnr.nextInt();
             System.out.println("User entered: " + num1);
-            // use placeholders to see if old num is greater than new num
+            // TODO: use placeholders to see if old num is greater than new num
+            if (num1 > bigNum) {
+                System.out.println("New big number found");
+                bigNum = num1;
+            }
         }
         //i = 90;
-        num1 = 67;
+        // print biggest number
+        System.out.println("Biggest number is: " + bigNum);
     }
 }
