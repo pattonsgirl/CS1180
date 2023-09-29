@@ -8,7 +8,17 @@ public class nestedbiggest {
          * For each iteration of the loop:
          * Checks if the next number in the list is the biggest number given so far
          * Stores the largest value the user has provided… so far
-         * Print the largest number the user provided in that string
+         * Print the largest number the user provided in that line of input
+         * 
+         * Sample:
+         * 4 80 23 72 14
+         * The biggest number this round was 80
+         * 3 90 2 23
+         * The biggest number this round was 90
+         * 9 56 777 20 8 900 4 87 43 32
+         * The biggest number this round was 777
+         * 0
+         * Program over
          * 
          */
         Scanner scnr = new Scanner(System.in);
