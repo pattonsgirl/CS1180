@@ -37,14 +37,12 @@ public class nestedbiggest {
             // read first number to determine how many iterations
             // Sample: 4 80 23 72 14
 
-            // what if howMany == 0?
-
             for (i = 0; i < howMany; ++i) {
                 // read next integer
                 newNum = scnr.nextInt();
                 // for debugging
                 // System.out.printf("testing %d against %d\n", newNum, biggest);
-                if (newNum > biggest) {
+                if (newNum < biggest) {
                     // System.out.println("The biggest so far was " + biggest);
                     biggest = newNum;
                 }
@@ -54,7 +52,7 @@ public class nestedbiggest {
             // reset biggest to analyze next input set
             biggest = 0;
 
-        } while (howMany != 0);
+        } while (howMany == 0);
 
     }
 }
