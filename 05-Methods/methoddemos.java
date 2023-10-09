@@ -1,7 +1,17 @@
 import java.awt.*;
+/**
+ * @author Kayleigh Duncan
+ * @version 2.0.0
+ */
 public class methoddemos {
     final static int sum = 0;
 
+    /**
+    * prints a cube of asterisks given value passed
+    * 
+    * @param size / dimensions of cube
+    * @return void
+    */
     public static void printCube(int size){
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
@@ -40,7 +50,14 @@ public class methoddemos {
         return a + b;
     }
 
-    
+
+    /**
+    * Driver of my program
+    * Tests some methods, prints some output
+    * 
+    * @param arguments from command line
+    * @return void
+    */
     public static void main(String[] args) {
         System.out.println("Beginning of my program");
         printHello();

@@ -3,6 +3,7 @@ public class shapesmethods {
     // within the class
     // final = immutable / unchangeable, will cause an error if change is attempted
     final static double GRAVITY = 9.8;
+    final static int DAYS_OF_WEEK = 7;
     // no final keyword means the value stored here starts at 9.8
     // but could be changed by methods as my program chugs along
     static double accumulator = 9.8;
@@ -15,7 +16,10 @@ public class shapesmethods {
     // Parameter: integer that defines pyramid height
     // Return value: void
     public static void pyramid(int a) {
+        //DAYS_OF_WEEK = 9;
+        //GRAVITY += 1.07;
         System.out.println(GRAVITY);
+        accumulator = accumulator + accumulator * 8;
         // if GRAVITY is final, then this would cause an issue
         // else GRAVITY can be changed
         // GRAVITY = 90.0;
@@ -30,6 +34,7 @@ public class shapesmethods {
             }
             System.out.println();
         }
+        //int i;
     }
 
     // rectangle prints a rectangle
@@ -49,6 +54,7 @@ public class shapesmethods {
 
     public static void main(String[] args) {
         System.out.println("Starting shapes");
+        accumulator = accumulator + accumulator * 8;
         int lines = 3;
         int across = 10;
         // methods take arguments, but have no return value
