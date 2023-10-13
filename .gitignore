@@ -2,7 +2,7 @@
 PracticeProblems
 05-Methods/doc/*
 Exams/*  
-Exams/midtermproblem.md 
+!Exams/midtermproblem.md 
 Exams/finalproblem.md 
 10-2DArrays/ArraysKeyValue.java
 11-Classes-Objects/DoxyPlay
