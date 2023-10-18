@@ -7,8 +7,31 @@ public class mathplay {
         // to change the value.
         // Values that are static facts can be declared as finals
         // to prevent accidental changes
+        String str1 = "midterm";
+int go = 0;
+while (go <= str1.length()) {
+    System.out.println(go);  
+    go++;
+}
+System.out.println(go);
+int n = 4;
+for (int i = 0; i <= n; i++) {
+    System.out.print(i + " ");
+}
+String foo = "BuBbLeS";
+//foo = Character.toString(Character.toLowerCase(foo.charAt(2)));
+String str2 = "Hello world";
+String str3 = "Hello world";
+System.out.println(str2.compareTo(str3));
+//if (str2.compareTo(str3)){
+//    System.out.print("The strings are equal!");
+//}
+char bar;
+bar = Character.toLowerCase(foo.charAt(2));
+System.out.println(bar);
         final double pi = 3.14159;
         double grav = 9.8;
+        //System.out.print(0/0);
         // if pi is a final, this becomes an invalid statement
         // since the value of pi cannot be changed.
         // pi = 5;
