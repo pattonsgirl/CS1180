@@ -134,9 +134,13 @@ public static void main(String[] args) {
 ### Javadoc
 
 - All tags in Javadoc & usage rules:
-  - https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
-- Generate Javadoc in your class with a VS Code extension
+  - [Oracle JavaDoc Tool](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)
+  - Two good reads on standards and examples for using JavaDoc
+    - [I'd Rather be Writing - Java: Javadoc tags](https://idratherbewriting.com/java-javadoc-tags/)
+    - [Stephen Colebourne's blog - Javadoc coding standards](https://blog.joda.org/2012/11/javadoc-coding-standards.html)
 
+
+- Generate Javadoc in your class with a VS Code extension
   - This will NOT guess at what you function does, but will create the basic tag kit for your functions
   - https://marketplace.visualstudio.com/items?itemName=madhavd1.javadoc-tools
 

@@ -9,6 +9,9 @@ To that end, there are two talks we need to have:
 ## Stack vs Heap
 
 
+Objects are always allocated on the **heap**
+    - anytime you have used the `new` keyword, you have created an **Object**
+
 ## Garbage Collector
 
 Quick note: Java does not have a one-size fits all Garbage Collector.  There are different garbage collectors for different scopes of work.  Dig into the resource articles at the bottom of this section for more info.
@@ -35,3 +38,4 @@ I ranked these based on how in the weeds they go.
 - [Memory Management in Java: An Introduction](https://foojay.io/today/java-memory-management/)
 - [Video - G1: Java's Default Garbage Collector](https://inside.java/2023/10/15/g1/)
 - [Get in-depth information on Java Garbage Collection](https://www.eginnovations.com/blog/what-is-garbage-collection-java/)
+- [Java (JVM) Memory Model - Memory Management in Java](https://www.digitalocean.com/community/tutorials/java-jvm-memory-model-memory-management-in-java)
