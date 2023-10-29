@@ -8,9 +8,29 @@ To that end, there are two talks we need to have:
 
 ## Stack vs Heap
 
+Java uses two kinds of memory to store data and order of instructions: the **stack** and the **heap**
+
+The stack is used to store the order of method execution and local variables.
+    - which method you are going to
+    - which method to return to
+    - primitive data storage (int, double, char, boolean - NOT String - that's an object)
+        - this is also false if the variable is created outside a method, like a class variable.
 
 Objects are always allocated on the **heap**
     - anytime you have used the `new` keyword, you have created an **Object**
+        - `Scanner`, `int[SIZE]`, `ArrayList`, `File`, etc...
+
+Why should you care?  How different data is stored in your applications and the structures you pick is a factor when designing solutions.
+- [How ArrayLists are Stored in Memory](https://www.adservio.fr/post/arraylist-vs-linkedlist-in-java-what-i-need-to-know)
+- [Stack Overflow - How does memory allocation of an ArrayList work?](https://stackoverflow.com/questions/23245386/how-does-memory-allocation-of-an-arraylist-work)
+
+### Resources
+
+These are loosely ranked by complexity.
+
+- [Turing - Stack vs Heap Memory Allocation in Java](https://www.turing.com/kb/stack-vs-heap-memory-allocation-in-java)
+- [DigitalOcean - Java Heap Space vs Stack - Memory Allocation in Java](https://www.digitalocean.com/community/tutorials/java-heap-space-vs-stack-memory)
+- [JavaTPoint - Stack Vs Heap Java](https://www.javatpoint.com/stack-vs-heap-java)
 
 ## Garbage Collector
 
