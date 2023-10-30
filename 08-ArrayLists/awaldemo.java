@@ -18,7 +18,8 @@ public class awaldemo {
     }
 
     public static void main(String[] args) throws Exception {
-        FileInputStream fis = new FileInputStream("data.txt");
+        String filegiven = args[0];
+        FileInputStream fis = new FileInputStream(filegiven);
         Scanner in_fis = new Scanner(fis);
 
         // TODO what about arrays?
@@ -51,10 +52,12 @@ public class awaldemo {
         }
 
         printer(nums);
-        Object[] was_an_AL = new Object[alnums.size()];
-        was_an_AL = alnums.toArray();
+        int[] was_an_AL = new int[alnums.size()];
+        //alnums.toArray(was_an_AL);
         // TODO: EITHER turn this into an int array OR make an 
         //      overloaded method that handles ArraysLists
         //printer(was_an_AL);
+        //System.out.println(nums.toString());
+        System.out.println(alnums.toString());
     }
 }
