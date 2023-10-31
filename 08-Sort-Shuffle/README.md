@@ -29,3 +29,24 @@ You need to know options exist because some libraries are going to let you use a
 - [See how things shift in a static chart](https://observablehq.com/@stwind/sorting-algorithms)
 - [VIDEO - watch and listen to sorting algorithms in action](https://www.youtube.com/watch?v=kPRA0W1kECg&ab_channel=TimoBingmann)
 - [VIDEO - watch a side-by-side to see time-to-sort](https://www.youtube.com/watch?v=BeoCbJPuvSE&ab_channel=ViktorBohush)
+
+## Shuffling Algorithms
+
+Some argue that the act of shuffling is to un-sort something.  But how to shuffle algorithmically (using programming) is neat!
+
+This [link is fantastic for breaking down how to approach shuffling](https://bost.ocks.org/mike/shuffle/).  I like that it shows how you would first think about shuffling, and the issues with under-thinking the problem.  It focuses on leading you to the Fisher-Yates shuffle.
+
+Common Algorithms:
+- Fisher-Yates shuffle
+
+A hunk of algorithms are based on shuffling cards for exactly the reason you think - online gambling is huge, and accurately shuffling decks is important.  You can [look at different card shuffling strategies here](https://en.wikipedia.org/wiki/Shuffling).  Today I learned I do a Corgi shuffle.
+
+Now, just like with `sort` above, some libraries are going to include a `shuffle`.  `shuffle` is again implemented by `Collections` - the idea here is we **shuffle** on Objects.  An `ArrayList` is a `Collection` of Objects.  The Java `Collection` framework contains a shuffle that implements **Fisher-Yates**.
+
+[Read here how to use `shuffle` from `Collections` on things like `ArrayLists`](https://www.digitalocean.com/community/tutorials/shuffle-array-java)
+
+### Resources
+- [Other shuffling algorithms represented visually](https://observablehq.com/@jonhelfman/shuffling-algorithms)
+
+
+
