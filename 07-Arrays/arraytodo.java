@@ -15,6 +15,8 @@ public class arraytodo {
         // the small number we have "seen" AND the index of that smallest number
         int current_smallest = nums[0];
         int smallest_index = 0;
+        // outer loop sorted list
+        // inner loop search is reducing to what sorted yet
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] < current_smallest){
                 //System.out.println(nums[i]);
