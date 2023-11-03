@@ -1,6 +1,6 @@
 public class p3TODOs {
-    int num = 0;
-    Scanner sncr = new Scanner(System.in);
+    //int num = 0;
+    //Scanner sncr = new Scanner(System.in);
 
     public static void main(String[] args) {
         // GOAL: validate a user given a dictionary
