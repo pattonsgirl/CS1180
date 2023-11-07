@@ -11,6 +11,17 @@ public class multiarrays {
             {3, 4, 6, 7, 67},
         };
 
+        int rows = 0;
+        int cols = 0;
+        rows = nums.length;
+        cols = nums[0].length;
+        
+        // for (int[] row: nums)
+        for (int y = 0; y < rows; y++) {
+            for (int x = 0; x < cols; x++) {
+                System.out.println(nums[y][x]);
+            }
+        }
 
         
     }
