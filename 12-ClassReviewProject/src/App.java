@@ -11,5 +11,9 @@ public class App {
         //Bank.scnr.
         System.out.println(bank);
 
+        Account account1 = new Account();
+
+        System.out.println(account1.toString());
+
     }
 }

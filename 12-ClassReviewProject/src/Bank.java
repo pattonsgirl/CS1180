@@ -15,6 +15,7 @@ public class Bank {
         System.out.println("Bank creation failed.  Must provide a name");
         System.out.print("Provide a bank name: ");
         this.name = scnr.nextLine();
+        this.accounts = new ArrayList<Account>();
     }
 
     /*
@@ -22,6 +23,7 @@ public class Bank {
      */
     public Bank(String name) {
         this.name = name;
+        this.accounts = new ArrayList<Account>();
     }
 
     public String getName(){
@@ -61,8 +63,10 @@ public class Bank {
     @Override
     public String toString() {
         String whole_bank = this.name + "\n";
-        for (Account account: accounts) {
-            //TODO: revisit once Accounts class is operational
+        if (!accounts.isEmpty()){
+            for (Account account: accounts) {
+                //TODO: revisit once Accounts class is operational
+            }
         }
         return whole_bank;
     }
