@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Bank {
+    public static int overdraftfee = 35;
     private String name;
     private ArrayList<Account> accounts;
     private static Scanner scnr = new Scanner(System.in);
@@ -43,6 +44,24 @@ public class Bank {
     }
 
     /*
+     * create an Account
+     */
+    public boolean createAccount(double money, String owner){
+        Account new_account = new Account(owner, money);
+        // if this new_account ID is the same as any other account ID?
+        // wrapper while loop, that generates new account ids for the above account object until we definitely get a unique
+        for (Account account: this.accounts){
+            if(account.getAccountID().equals(new_account.getAccountID())){
+                return false;
+                //new_account = new Account(owner, money);
+            }
+        }
+        this.accounts.add(new_account);
+        return true;
+
+    }
+
+    /*
      * This method check to see if user is approved to get a loan
      * @param acc_owner_name name of account owner
      * @return boolean if approved, returns true.  Else false
@@ -66,6 +85,7 @@ public class Bank {
         if (!accounts.isEmpty()){
             for (Account account: accounts) {
                 //TODO: revisit once Accounts class is operational
+                whole_bank = whole_bank + account.toString() + "\n";
             }
         }
         return whole_bank;
