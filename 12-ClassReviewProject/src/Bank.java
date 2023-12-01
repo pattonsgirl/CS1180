@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -76,6 +79,47 @@ public class Bank {
     }
 
     /*
+     * Transfer funds from one bank account to another account
+     */
+    public void transferFunds() {
+
+    }
+
+    /*
+     * Save bank name & all accounts to file
+     */
+    public static void saveBank(Bank bank) {
+        System.out.print("Where would you like to save bank info: ");
+        String filename = scnr.nextLine();
+        // open a file for writing
+        try {
+            FileOutputStream fileOutStream = new FileOutputStream(filename);
+            PrintWriter outFS = new PrintWriter(fileOutStream);
+            outFS.print(bank);
+            // remember, order of what closes matters!
+            outFS.close();
+            fileOutStream.close();
+        } catch (Exception e) {
+            System.out.println("Problem occured.  Bank not saved to file");
+        }
+        // write out my bank info
+
+    }
+
+    /*
+     * Load bank information from file into bank object
+     */
+    public static void loadBank (Bank bank) {
+        // TODO: debate: pass a bank or return a bank?
+        System.out.print("Enter filename to load bank info from: ");
+        String filename = scnr.nextLine();
+        // TODO: info in file needs to use common separator
+        //      discuss TAB separated vs COMMA separated
+        
+        // data notes: first line is BANK NAME, next lines are ACCOUNT INFO
+    }
+
+    /*
      * String of all bank info including name & all accounts
      * @return String bank info
      */
@@ -84,7 +128,6 @@ public class Bank {
         String whole_bank = this.name + "\n";
         if (!accounts.isEmpty()){
             for (Account account: accounts) {
-                //TODO: revisit once Accounts class is operational
                 whole_bank = whole_bank + account.toString() + "\n";
             }
         }

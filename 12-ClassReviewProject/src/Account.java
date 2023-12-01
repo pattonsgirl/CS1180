@@ -13,6 +13,7 @@ public class Account {
         Scanner scnr = new Scanner(System.in);
         System.out.print("Name of account owner: ");
         this.owner = scnr.nextLine();
+        //scnr.nextLine();
         this.money = 0.00;
         this.accountID = generateID(); 
         scnr.close();
@@ -89,6 +90,7 @@ public class Account {
 
     @Override
     public String toString(){
+        //return this.accountID + ", " + this.owner + ", " + this.money;
         return this.accountID + "\t" + this.owner + "\t" + this.money;
     }
 }
