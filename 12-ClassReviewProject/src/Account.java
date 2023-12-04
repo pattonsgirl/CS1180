@@ -11,8 +11,10 @@ public class Account {
     public Account() {
         // at minimum I need an owner name
         Scanner scnr = new Scanner(System.in);
-        System.out.print("Name of account owner: ");
-        this.owner = scnr.nextLine();
+        //System.out.print("Name of account owner: ");
+        //this.owner = scnr.nextLine();
+        this.owner = "";
+        System.out.println("Please set account owner.");
         //scnr.nextLine();
         this.money = 0.00;
         this.accountID = generateID(); 

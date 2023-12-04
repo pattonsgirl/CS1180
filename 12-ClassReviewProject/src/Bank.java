@@ -8,7 +8,7 @@ public class Bank {
     public static int overdraftfee = 35;
     private String name;
     private ArrayList<Account> accounts;
-    private static Scanner scnr = new Scanner(System.in);
+    //private static Scanner scnr = new Scanner(System.in);
     //private double bankValue;
     // TODO: maybe an array list for each account class
 
@@ -16,10 +16,12 @@ public class Bank {
      * Constructor that handles bank objects being created with no name
      */
     public Bank() {
+        Scanner scnr = new Scanner(System.in);
         System.out.println("Bank creation failed.  Must provide a name");
         System.out.print("Provide a bank name: ");
         this.name = scnr.nextLine();
         this.accounts = new ArrayList<Account>();
+        scnr.close();
     }
 
     /*
@@ -89,6 +91,7 @@ public class Bank {
      * Save bank name & all accounts to file
      */
     public static void saveBank(Bank bank) {
+        Scanner scnr = new Scanner(System.in);
         System.out.print("Where would you like to save bank info: ");
         String filename = scnr.nextLine();
         // open a file for writing
@@ -103,16 +106,19 @@ public class Bank {
             System.out.println("Problem occured.  Bank not saved to file");
         }
         // write out my bank info
-
+        scnr.close();
     }
 
     /*
      * Load bank information from file into bank object
      */
     public static void loadBank (Bank bank) {
+        Scanner scnr = new Scanner(System.in);
+
         // TODO: debate: pass a bank or return a bank?
         System.out.print("Enter filename to load bank info from: ");
         String filename = scnr.nextLine();
+        scnr.close();
         // TODO: info in file needs to use common separator
         //      discuss TAB separated vs COMMA separated
         
