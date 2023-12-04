@@ -35,12 +35,12 @@ public class App {
         bank2.createAccount(500000, "Just Better");
         bank2.createAccount(Integer.MAX_VALUE, "Reese Hatfield");
         System.out.println(bank2);
-        /*
-         * Account acc = new Account();
-         * System.out.println(acc);
-         * SavingsAccount sa = new SavingsAccount();
-         * System.out.println(sa);
-         */
+        
+        //Account acc = new Account();
+         // System.out.println(acc);
+        //SavingsAccount sa = new SavingsAccount();
+        //System.out.println(sa);
+        
 
         // scnr.next();
         /*
@@ -49,40 +49,41 @@ public class App {
          * }/*
          */
 
-        // System.exit(0);
+        //System.exit(0);
 
-        // TODO: need a menu
-        printMenu();
-        // get user input
-        // verify it is a number 1 - 10
+        // User input validation && action menu
         int tellerOption = 0;
         while (true) {
+            printMenu();
+             // get user input
+        // verify it is an INTEGER && is a number 1 - 10
             try {
                 tellerOption = scnr.nextInt();
+                // capture & dump remainder of line
+                scnr.nextLine();
 
             } catch (InputMismatchException e) {
-                // tellerOption = 0;
-                if (scnr.hasNext()) {
-                    scnr.nextLine();
-                }
+                // capture & dump remainder of line
+                scnr.nextLine();
                 System.out.println("Please enter a NUMBER from the following menu: ");
-                printMenu();
+                
             }
-            if (tellerOption > 0 && tellerOption < 11) {
-                break;
-            } else {
+            if (tellerOption <= 0 || tellerOption >= 11) {
                 System.out.println("Please enter a NUMBER from the following menu: ");
-                printMenu();
                 continue;
             }
-        }
-        // catch otherwise, re-print menu
-
-        while (true) {
+            // do actions based on valid cases
             switch (tellerOption) {
                 case 1:
-                    Account newacc = new Account();
-                    bank2.createAccount(newacc.getMoney(), newacc.getOwner());
+                    // debate: create new Account object OR prompt for info.  
+                    //         Account() prompted for owner, but doesn't now
+                    System.out.println("Creating new account");
+                    System.out.print("Provide an account owner: ");
+                    String accOwner = scnr.nextLine();
+                    System.out.print("Provide initial deposit: ");
+                    double accFunds = scnr.nextDouble();
+                    bank2.createAccount(accFunds, accOwner);
+                    // NOTE: these breaks break out of the SWITCH, NOT the WHILE LOOP
                     break;
                 case 2:
                     // TODO: searches user account details
@@ -100,24 +101,7 @@ public class App {
                 default:
                     break;
             }
+            tellerOption = 0;
         }
-
-        // TODO: save bank info to a file
-
-        // if Bank scanner was public, the following is thing
-        // Bank.scnr.
-        // System.out.println(bank);
-
-        /*
-         * Account account1 = new Account();
-         * 
-         * System.out.println(account1.toString());
-         * account1.deposit(350);
-         * System.out.println(account1);
-         * account1.withdraw(20);
-         * System.out.println(account1);
-         * account1.withdraw(400);
-         * System.out.println(account1);
-         */
     }
 }

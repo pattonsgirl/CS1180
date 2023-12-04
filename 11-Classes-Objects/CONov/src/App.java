@@ -28,5 +28,7 @@ public class App {
         //user_bikes[0].
 
         System.out.println(road_bike.getBarTapeStatus());
+        RoadBike rb = new RoadBike();
+        System.out.println(rb.getBarTapeStatus());
     }
 }

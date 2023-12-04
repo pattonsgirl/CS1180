@@ -121,6 +121,13 @@ public class Bank {
         scnr.close();
         // TODO: info in file needs to use common separator
         //      discuss TAB separated vs COMMA separated
+        /*
+         * save first line into Bank.setName(pass it line 1)
+         * while hasnextLine, reamining lines are accounts
+         * add Account to array list
+         * create new Account contructor that takes in account properties
+         * Bank.arraylist.add(new Account)
+         */
         
         // data notes: first line is BANK NAME, next lines are ACCOUNT INFO
     }
