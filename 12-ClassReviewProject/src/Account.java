@@ -28,6 +28,12 @@ public class Account {
         this.accountID = generateID(); 
     }
 
+    public Account(String accountID, String owner, double money) {
+        this.accountID = accountID;
+        this.owner = owner;
+        this.money = money;
+    }
+
     public void setOwner(String owner){
         this.owner = owner;
     }

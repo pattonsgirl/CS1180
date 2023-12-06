@@ -1,3 +1,4 @@
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
@@ -112,24 +113,33 @@ public class Bank {
     /*
      * Load bank information from file into bank object
      */
-    public static void loadBank (Bank bank) {
+    public static void loadBank (Bank bank) throws Exception{
         Scanner scnr = new Scanner(System.in);
 
         // TODO: debate: pass a bank or return a bank?
         System.out.print("Enter filename to load bank info from: ");
         String filename = scnr.nextLine();
         scnr.close();
-        // TODO: info in file needs to use common separator
-        //      discuss TAB separated vs COMMA separated
-        /*
-         * save first line into Bank.setName(pass it line 1)
-         * while hasnextLine, reamining lines are accounts
-         * add Account to array list
-         * create new Account contructor that takes in account properties
-         * Bank.arraylist.add(new Account)
-         */
-        
         // data notes: first line is BANK NAME, next lines are ACCOUNT INFO
+        //              data is TAB separated
+        FileInputStream fileByteStream = new FileInputStream(filename);
+        Scanner inFS = new Scanner(fileByteStream);
+        // I am assuming the first line will always exist - has name
+        bank.setName(inFS.nextLine());
+        // the rest are accounts
+        while (inFS.hasNextLine()) {
+            // start data validation by printing that you captured the line
+            String accountLine = inFS.nextLine();
+            System.out.println("Reading: " + accountLine);
+            // split on TAB
+            String[] accountData = accountLine.split("\t");
+            // if it worked, this prints only account ID from read data
+            //System.out.println(accountData[0]);
+            // created new Account constructor since these come with IDs
+            bank.accounts.add(new Account(accountData[0], accountData[1], Double.parseDouble(accountData[2])));
+        }
+        inFS.close();
+        fileByteStream.close();
     }
 
     /*
