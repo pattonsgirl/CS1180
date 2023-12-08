@@ -172,6 +172,8 @@ public class Account implements Comparable<Account> {
         // sort rule one - check accountOwner strings
         // if compare is POSTIVE number, this.accountOwner is alphabetically
         // BEFORE a.accountOwner
+        String[] thisname = this.accountOwner.split(" ");
+        String[] othername = a.accountOwner.split(" ");
         if (this.accountOwner.compareTo(a.accountOwner) > 0) {
             return 1;
         }
@@ -184,14 +186,21 @@ public class Account implements Comparable<Account> {
             // alternative sort rule 2 - sort by accountType
             // owner name is the same, sort by money
             // if (this.money > a.money) { // would give same result
-            if (this.money.compareTo(a.money) > 0) {
+            // TODO - sort rule 2 - if account owner is same, sort by account type
+            if (this.accountType.compareTo(a.accountType) > 0) {
                 return 1;
-            } else if (this.money.compareTo(a.money) < 0) {
+            } else if (this.accountType.compareTo(a.accountType) < 0) {
                 return -1;
             } else {
-                // both accounts have same owner & same amount of funds
-                // sort rule 3 - sort by accountNumber?
-                return 0;
+                if (this.money.compareTo(a.money) > 0) {
+                    return 1;
+                } else if (this.money.compareTo(a.money) < 0) {
+                    return -1;
+                } else {
+                    // both accounts have same owner & same amount of funds
+                    // sort rule 3 - sort by accountNumber?
+                    return 0;
+                }
             }
         }
 

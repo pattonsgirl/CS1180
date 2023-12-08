@@ -194,8 +194,8 @@ catch(exception) {
 
 - defining a HashMap of key/value pairs
 - methods to access and manipulate data in a HashMap
-- hashCode & storing data without an index
-- note: to use custom objects as keys, an overridden hashCode method needs to be defined in the class, along with an overridden equals method
+- ~~hashCode & storing data without an index~~
+- ~~note: to use custom objects as keys, an overridden hashCode method needs to be defined in the class, along with an overridden equals method~~
 - see [09-HashMaps](../09-HashMaps)
 
 ## Classes & Objects
@@ -213,7 +213,7 @@ catch(exception) {
     - `System.out.println(objectA);`
   - `compareTo` to compare object order (primarily for sorting)
     - see [Demos](../11-Classes-Objects/Demos/)
-  - `hashCode` to use objects as keys (HashMaps cannot have duplicate keys)
+  - ~~`hashCode` to use objects as keys (HashMaps cannot have duplicate keys)~~
     - see [HashDemo](../11-Classes-Objects/HashDemo/)
   - `equals` to check if two objects are equivalent
     - `objectA.equals(objectB);`

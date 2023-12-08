@@ -48,7 +48,6 @@ public class App {
         while (true) {
             //printMenu();
             //scnr.nextLine();
-            int tellerOption = validOption();
             // get user input
             // verify it is an INTEGER && is a number 1 - 10
             try {
